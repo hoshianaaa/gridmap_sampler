@@ -32,6 +32,13 @@ int main(int argc, char** argv)
       map.at("elevation", *it) = 0.2;
     }
 
+    // change (0,0)
+    Index index(0,0);
+    Position pos(0,0);
+    map.getIndex(pos, index);
+    map.at("elevation", index) = 1.0;
+
+
     // Publish grid map.
     map.setTimestamp(time.toNSec());
     grid_map_msgs::GridMap message;
