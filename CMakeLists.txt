@@ -31,9 +31,25 @@ include_directories(
 )
 
 add_executable(demo1 src/demo1.cpp)
-
 target_link_libraries(demo1
   #${PCL_LIBRARIES}
   ${catkin_LIBRARIES}
 )
 
+add_executable(demo2 src/demo2.cpp)
+target_link_libraries(demo2
+  #${PCL_LIBRARIES}
+  ${catkin_LIBRARIES}
+)
+
+add_executable(demo3 src/demo3.cpp)
+target_link_libraries(demo3
+  #${PCL_LIBRARIES}
+  ${catkin_LIBRARIES}
+)
+
+add_executable(resolution_change_demo_node src/resolution_change_demo_node.cpp)
+target_link_libraries(resolution_change_demo_node
+  #${PCL_LIBRARIES}
+  ${catkin_LIBRARIES}
+)
